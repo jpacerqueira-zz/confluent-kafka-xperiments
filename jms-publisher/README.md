@@ -1,14 +1,15 @@
 
 
- 1. Example test
+ - KafkaConnectionFactory JMSClient
 
+ 1.1 test 
 
-   user@Joaos-MacBook-Pro jms-publisher % cat test-jms-to-kakfa.sh 
+   user@Users-MacBook-Pro jms-publisher % cat test-jms-to-kakfa.sh 
    #!/usr/bin/env bash
    #
    java -classpath ~/.m2/repository/javax/jms/jms/1.1/jms-1.1.jar:kafka-jms-fatjar/target/kafka-jms-client-fat-4.1.2.jar:target/jmstokafka-0.0.1.jar com.fuelbigdata.publisher.PublisherApp
    #
-   user@Joaos-MacBook-Pro jms-publisher % bash -x test-jms-to-kakfa.sh
+   user@Users-MacBook-Pro jms-publisher % bash -x test-jms-to-kakfa.sh
     
    + java -classpath ~/.m2/repository/javax/jms/jms/1.1/jms-1.1.jar:kafka-jms-fatjar/target/kafka-jms-client-fat-4.1.2.jar:target/jmstokafka-0.0.1.jar com.fuelbigdata.publisher.PublisherApp
    
