@@ -20,7 +20,8 @@ public class PublisherApp {
     public static void main(String[] args) throws JMSException {
 
         Properties settings = new Properties();
-        settings.put(JMSClientConfig.CLIENT_ID_CONFIG, "test-client-2");
+        settings.put(JMSClientConfig.CLIENT_ID_CONFIG, "test-client-1");
+        settings.put(JMSClientConfig.CONSUMER_GROUP_ID_CONFIG, "test-client-1");
         settings.put(JMSClientConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         settings.put(JMSClientConfig.ZOOKEEPER_CONNECT_CONF, "localhost:2181");
 
@@ -32,7 +33,7 @@ public class PublisherApp {
         MessageProducer producer = session.createProducer(testQueue);
         for (int i=0; i<50; i++) {
             TextMessage message = session.createTextMessage();
-            String trademessage = "New fpML Trade Message n=" + i;
+            String trademessage = "New fpML Trade Message Publisher n=" + i;
             message.setText(trademessage);
             producer.send(message);
         }

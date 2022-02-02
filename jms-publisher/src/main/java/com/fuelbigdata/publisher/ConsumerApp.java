@@ -20,9 +20,11 @@ public class ConsumerApp {
     public static void main(String[] args) throws JMSException {
 
         Properties settings = new Properties();
-        settings.put(JMSClientConfig.CLIENT_ID_CONFIG, "test-client-2");
+        settings.put(JMSClientConfig.CLIENT_ID_CONFIG, "test-client-1");
+        settings.put(JMSClientConfig.CONSUMER_GROUP_ID_CONFIG, "test-client-1");
         settings.put(JMSClientConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         settings.put(JMSClientConfig.ZOOKEEPER_CONNECT_CONF, "localhost:2181");
+        settings.put("auto.offset.reset","earliest");
 
         ConnectionFactory connectionFactory = new KafkaConnectionFactory(settings);
         Connection connection = connectionFactory.createConnection();
