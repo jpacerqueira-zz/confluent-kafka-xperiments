@@ -31,9 +31,9 @@ public class PublisherApp {
         Destination testQueue = session.createQueue("test-queue");
 
         MessageProducer producer = session.createProducer(testQueue);
-        for (int i=0; i<50; i++) {
+        for (int i=0; i<10; i++) {
             TextMessage message = session.createTextMessage();
-            String trademessage = "New fpML Trade Message Publisher n=" + i;
+            String trademessage = "{" + "\"header\":{\"message_id\":\"fpml_id\",\"message_count_id\":" + i + "},\"message_content\":{\"message_type\":\"new fpML message\",\"status\":\"started\",\"msg_id\":122274738,\"amount\":120202.01 }" + "}" ;
             message.setText(trademessage);
             producer.send(message);
         }
