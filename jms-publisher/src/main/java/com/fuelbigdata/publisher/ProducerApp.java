@@ -13,6 +13,7 @@ import javax.jms.Session;
 import javax.jms.TextMessage;
 
 import org.json.*;
+import org.json.simple.*;
 
 import io.confluent.kafka.jms.JMSClientConfig;
 import io.confluent.kafka.jms.KafkaConnectionFactory;
