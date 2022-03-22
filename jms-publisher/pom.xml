@@ -61,11 +61,18 @@
       <artifactId>jms</artifactId>
       <version>1.1</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20220320</version>
+    </dependency>
   </dependencies>
 
   <repositories>
     <repository>
-      <id>confluent</id>
+      <id>io.confluent</id>
+      <name>kafka-jms-client</name>
       <url>https://packages.confluent.io/maven/</url>
     </repository>
     <repository>
@@ -73,7 +80,11 @@
       <name>jms</name>
       <url>https://mvnrepository.com/artifact/javax.jms/jms/</url>
     </repository>
+    <repository>
+      <id>org.json</id>
+      <name>json</name>
+      <url>https://repo1.maven.org/maven2/org/json/json/</url>
+    </repository>
   </repositories>
 
 </project>
-

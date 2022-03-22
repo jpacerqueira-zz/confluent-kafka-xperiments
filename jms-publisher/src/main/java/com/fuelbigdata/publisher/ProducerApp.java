@@ -12,6 +12,8 @@ import javax.jms.MessageProducer;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 
+import org.json.*;
+
 import io.confluent.kafka.jms.JMSClientConfig;
 import io.confluent.kafka.jms.KafkaConnectionFactory;
 
