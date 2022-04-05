@@ -18,4 +18,12 @@
 
      echo 'Navigate to the Control Center web interface at http://localhost:9021'
 
+     2. To run in minimal mode start just zookeeper and broker container in the cluser
+
+     3. Use Clonfluenc.inc official KafkaCat in container mode to define the content of your topics
+
+     # $ docker run --tty --network kafka-cp_all_default confluentinc/cp-kafkacat kafkacat -b broker:29092 -L
+
+
      #
+      
